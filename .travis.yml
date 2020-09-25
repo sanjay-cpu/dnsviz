@@ -14,6 +14,9 @@ addons:
       - libsodium18
       - graphviz
       - bind9
+
+before_install:
+  - sudo chown -Rvf $USER:$GROUP ~/.cache/pip/wheels
 # command to install dependencies
 install:
   - pip install -r requirements.txt
